@@ -49,7 +49,7 @@ export const MainSlider = () => {
                     backgroundRepeat: "no-repeat",
                     position: "relative",
                   }}
-                >
+>
                   <div className='position-absolute layer d-flex align-items-start justify-content-center flex-column top-0 start-0 w-100 h-100'>
                     <div className='container poppins-bold'>
                       <h1 className='intro-main mb-3'>

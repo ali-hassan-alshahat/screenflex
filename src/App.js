@@ -1,5 +1,9 @@
 import React, { useEffect } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
@@ -11,6 +15,16 @@ import { Movies } from "./pages/Movies";
 import { Tv } from "./pages/Tv";
 import { DiscoverTv } from "./pages/DiscoverTv";
 import { DiscoverMovies } from "./pages/DiscoverMovies";
+
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   let routers = createBrowserRouter([
